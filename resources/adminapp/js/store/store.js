@@ -61,6 +61,8 @@ import TestResultsIndex from './cruds/TestResults'
 import TestResultsSingle from './cruds/TestResults/single'
 import TestAnswersIndex from './cruds/TestAnswers'
 import TestAnswersSingle from './cruds/TestAnswers/single'
+import AdmissionsIndex from './cruds/Admissions'
+import AdmissionsSingle from './cruds/Admissions/single'
 
 Vue.use(Vuex)
 
@@ -126,7 +128,9 @@ export default new Vuex.Store({
     TestResultsIndex,
     TestResultsSingle,
     TestAnswersIndex,
-    TestAnswersSingle
+    TestAnswersSingle,
+    AdmissionsIndex,
+    AdmissionsSingle
   },
   strict: debug
 })

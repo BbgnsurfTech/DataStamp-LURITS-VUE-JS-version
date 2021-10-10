@@ -104,4 +104,8 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
 
     // Test Answers
     Route::resource('test-answers', 'TestAnswersApiController');
+
+    // Admissions
+    Route::post('admissions/media', 'AdmissionsApiController@storeMedia')->name('admissions.storeMedia');
+    Route::resource('admissions', 'AdmissionsApiController');
 });

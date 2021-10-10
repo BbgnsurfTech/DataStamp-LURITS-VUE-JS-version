@@ -750,6 +750,38 @@ const routes = [
         name: 'test_answers.edit',
         component: () => import('@cruds/TestAnswers/Edit.vue'),
         meta: { title: 'cruds.testAnswer.title' }
+      },
+      {
+        path: 'student-management',
+        name: 'student_management',
+        component: View,
+        redirect: { name: 'admissions.index' },
+        children: [
+          {
+            path: 'admissions',
+            name: 'admissions.index',
+            component: () => import('@cruds/Admissions/Index.vue'),
+            meta: { title: 'cruds.admission.title' }
+          },
+          {
+            path: 'admissions/create',
+            name: 'admissions.create',
+            component: () => import('@cruds/Admissions/Create.vue'),
+            meta: { title: 'cruds.admission.title' }
+          },
+          {
+            path: 'admissions/:id',
+            name: 'admissions.show',
+            component: () => import('@cruds/Admissions/Show.vue'),
+            meta: { title: 'cruds.admission.title' }
+          },
+          {
+            path: 'admissions/:id/edit',
+            name: 'admissions.edit',
+            component: () => import('@cruds/Admissions/Edit.vue'),
+            meta: { title: 'cruds.admission.title' }
+          }
+        ]
       }
     ]
   }

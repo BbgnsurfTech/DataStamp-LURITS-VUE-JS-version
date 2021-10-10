@@ -262,6 +262,20 @@ export default {
           icon: 'table_view',
           path: { name: 'test_answers.index' },
           gate: 'test_answer_access'
+        },
+        {
+          title: 'cruds.studentManagement.title',
+          icon: 'table_view',
+          path: { name: 'student_management' },
+          gate: 'student_management_access',
+          children: [
+            {
+              title: 'cruds.admission.title',
+              icon: 'table_view',
+              path: { name: 'admissions.index' },
+              gate: 'admission_access'
+            }
+          ]
         }
       ]
     }
